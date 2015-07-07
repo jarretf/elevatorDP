@@ -130,11 +130,14 @@ public class Building {
 	
 	private void createfloors(int total_floors)
 	{
-		floors[0]=new Floor(0, new Floor_button(), null);
+		Floor_factory flr_fact=new Floor_factory();
+		
+		floors[0]=flr_fact.create_floor("ground", 0, new Floor_button(), null);
 		for(int i=1;i<total_floors-1;i++)
 		{
-			floors[i]=new Floor(i, new Floor_button(), new Floor_button());
+			floors[i]=flr_fact.create_floor("intermediate", i, new Floor_button(), new Floor_button());
 		}
-		floors[total_floors-1]=new Floor(total_floors-1, null, new Floor_button());
+		floors[total_floors-1]=flr_fact.create_floor("top", total_floors-1, null, new Floor_button());
+		
 	}
 }

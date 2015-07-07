@@ -1,5 +1,5 @@
 
-public class Floor
+public abstract class Floor
 {
 	public int floor_no;
 	public Button up_button=null;
