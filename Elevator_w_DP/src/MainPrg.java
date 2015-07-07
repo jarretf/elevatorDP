@@ -8,7 +8,7 @@ public class MainPrg
 		
 		//Elevator is at ground floor, you are at third floor, you want to go to ground floor
 			bldg.elevator.current_floor.floor_no=0;
-			//bldg.press_floor_button(3, 0);
+			bldg.press_floor_button(3, 0);
 		
 		//Elevator is at top floor, you are on third floor, you want to go to ground floor
 			bldg.elevator.current_floor.floor_no=5;

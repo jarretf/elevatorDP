@@ -12,8 +12,7 @@ public class Building {
 		this.total_floors=total_floors;
 		floors=new Floor[total_floors];
 		createfloors(total_floors);
-		elevator=new Elevator(total_floors,floors[0]);
-		
+		elevator=Elevator.create_elevator(total_floors,floors[0]);
 		
 		
 		
